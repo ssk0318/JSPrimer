@@ -122,3 +122,16 @@ console.log(!true); // false
 // 条件式？trueの時に処理する式 : falseのときに処理する式
 const ValueA = true ? "A" : "B";
 console.log(ValueA); // A
+
+// 暗黙的な型変換
+//文字列に対するマイナス演算子の定義はJSにはない、ので2を数値に型変換している
+console.log(1 - "2"); // -1
+
+// プリミティブ型(値を変更できない)のシンボルは暗黙的に型変換できない
+// String()で文字列に変換する必要ある
+console.log("文字列と" + String(Symbol("シンボルの説明"))); // 文字列とSymcbol("シンボルの説明")
+// 同様に数値に変換する場合にはNumber()を用いる
+console.log(Number("1")); // 1
+
+// NaNはNumber型
+console.log(typeof NaN); // number
