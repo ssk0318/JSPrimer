@@ -135,3 +135,10 @@ console.log(Number("1")); // 1
 
 // NaNはNumber型
 console.log(typeof NaN); // number
+
+// 関数と宣言
+function echo(x = "デフォルト値") {
+  return x;
+}
+console.log(echo(1));
+console.log(echo());
